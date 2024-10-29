@@ -22,7 +22,7 @@ EXPOSE 8080
 ENV NODE_DEBUG=sl
 ENV SL_LOG_LEVEL=debug
 ENV SL_labId="local-testing"
-# ENV SL_projectRoot=''
+# ENV SL_projectRoot=' '
 
 
 # Using preload

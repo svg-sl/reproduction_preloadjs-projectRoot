@@ -16,7 +16,7 @@ npm run build
 3. Configure with slnodejs
 
 ```bash
-npx slnodejs config --tokenfile ./sltoken.txt --appname "testing-insights/tryout-node-docker" --branch "DEMO" --build "001"
+npx slnodejs config --tokenfile ./sltoken.txt --appname "testing-insights/tryout-node-docker" --branch "SLDEMO" --build "001"
 ```
 
 4. Scan with slnodejs

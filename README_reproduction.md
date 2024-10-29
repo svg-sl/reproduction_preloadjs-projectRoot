@@ -1,13 +1,13 @@
 <!-- Reproduction instructions and notes here -->
 
 
-PROBLEM BEING REPRODUCED:
+## PROBLEM BEING REPRODUCED:
 
 When using preload.js, if SL_projectRoot is not set, the container starts and quickly dies. 
 SL_projectRoot should be an optional param that defaults to the cwd if not set.
 
 
-REPRODUCTION STEPS & TS NOTES:
+## REPRODUCTION STEPS & TS NOTES:
 
 ### build 001 -- SL_projectRoot is defined
 

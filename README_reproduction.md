@@ -63,3 +63,41 @@ docker run -d -p 8080:8080 try-node-dock:002
 
 *RESULTS: container starts and dies very quickly*
 
+
+---
+
+Testing fix released in canary version (slnodejs@6.1.936)
+
+### build 003 -- Do not set `SL_projectRoot`
+
+In the Dockerfile, comment out `ENV SL_projectRoot=''` 
+
+```
+<!-- Cleanup and build the project -->
+npm install
+npm run build
+```
+
+
+```
+<!-- config -->
+npx slnodejs config --tokenfile ./sltoken.txt --appname "testing-insights/tryout-node-docker" --branch "DEMO-19446" --build "003"
+```
+
+```
+<!-- scan -->
+npx slnodejs scan --tokenfile "sltoken.txt" --buildsessionidfile "buildSessionId" --workspacepath "./dist" --scm "none" --excludedpaths "" --es6Modules --babylonPlugins "decorators-legacy"
+```
+
+```
+<!-- build -->
+docker build -t try-node-dock:003 .
+```
+
+```
+<!-- run -->
+docker run -d -p 8080:8080 try-node-dock:003
+```
+
+*RESULTS: SUCCESS - container runs as expected!*
+

@@ -69,3 +69,5 @@ npx slnodejs end --tokenfile sltoken.txt --buildsessionidfile buildSessionId --l
 ## How to use this repo
 <!-- 
 @TODO: Fill out to describe different branches demonstrating different reproductions -->
+
+The main branch on this repo should not be used to share reproduction info. If you have a reproduction to share with the team, create a new branch (include your ticket number in the branch name!). In the new branch, edit the `README_reproductions.md` to explain the reproduction case you have created. See the branch [`projectRoot-requirement--SLDEV-19446`](https://github.com/svg-sl/reproduction_preloadjs/blob/projectRoot-requirement--SLDEV-19446/README_reproduction.md) for an example of this. 

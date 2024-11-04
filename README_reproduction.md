@@ -66,7 +66,10 @@ docker run -d -p 8080:8080 try-node-dock:002
 
 ---
 
-Testing fix released in canary version (slnodejs@6.1.936)
+## RESOLUTION
+
+
+*Testing the fix released in canary version (slnodejs@6.1.936) on SLDEV-19446*
 
 ### build 003 -- Do not set `SL_projectRoot`
 
@@ -74,19 +77,19 @@ In the Dockerfile, comment out `ENV SL_projectRoot=''`
 
 ```
 <!-- Cleanup and build the project -->
-npm install
+npm install slnodejs@6.1.936
 npm run build
 ```
 
 
 ```
 <!-- config -->
-npx slnodejs config --tokenfile ./sltoken.txt --appname "testing-insights/tryout-node-docker" --branch "DEMO-19446" --build "003"
+npx slnodejs@6.1.936 config --tokenfile ./sltoken.txt --appname "testing-insights/tryout-node-docker" --branch "DEMO-19446" --build "003"
 ```
 
 ```
 <!-- scan -->
-npx slnodejs scan --tokenfile "sltoken.txt" --buildsessionidfile "buildSessionId" --workspacepath "./dist" --scm "none" --excludedpaths "" --es6Modules --babylonPlugins "decorators-legacy"
+npx slnodejs@6.1.936 scan --tokenfile "sltoken.txt" --buildsessionidfile "buildSessionId" --workspacepath "./dist" --scm "none" --excludedpaths "" --es6Modules --babylonPlugins "decorators-legacy"
 ```
 
 ```
